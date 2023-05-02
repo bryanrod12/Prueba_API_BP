@@ -1,0 +1,385 @@
+{
+	"info": {
+		"_postman_id": "da6a5e75-c976-4b55-ab96-784c549580e8",
+		"name": "Banco",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17815558"
+	},
+	"item": [
+		{
+			"name": "Cliente",
+			"item": [
+				{
+					"name": "Read All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7056/api/Clientes",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7056",
+							"path": [
+								"api",
+								"Clientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Read for ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7056/api/Clientes/3",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7056",
+							"path": [
+								"api",
+								"Clientes",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nombre\": \"Julia Pacheco\",\r\n  \"genero\": \"Masculino\",\r\n  \"edad\": 35,\r\n  \"identificacion\": 1725784174,\r\n  \"direccion\": \"Los Laureles\",\r\n  \"telefono\": 984596327,\r\n  \"contrasena\": \"78456\",\r\n  \"estado\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7056/api/Clientes",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7056",
+							"path": [
+								"api",
+								"Clientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"clienteID\": 3,\r\n    \"contrasena\": \"123456\",\r\n    \"estado\": true,\r\n    \"nombre\": \"Claudio Rodriguez\",\r\n    \"genero\": \"Masculino\",\r\n    \"edad\": 22,\r\n    \"identificacion\": 1725543811,\r\n    \"direccion\": \"Valle de los chillos\",\r\n    \"telefono\": 996303008\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7056/api/Clientes/3",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7056",
+							"path": [
+								"api",
+								"Clientes",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7056/api/Clientes/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7056",
+							"path": [
+								"api",
+								"Clientes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cuenta",
+			"item": [
+				{
+					"name": "Read All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7056/api/Cuentas",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7056",
+							"path": [
+								"api",
+								"Cuentas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Read for ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7056/api/Cuentas/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7056",
+							"path": [
+								"api",
+								"Cuentas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"n_Cuenta\": 65874,\r\n  \"tipo\": \"Corriente\",\r\n  \"saldo_Inicial\": 400,\r\n  \"estado\": true,\r\n  \"clienteID\": 3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7056/api/Cuentas",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7056",
+							"path": [
+								"api",
+								"Cuentas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"cuentaID\": 1,\r\n        \"n_Cuenta\": 246598,\r\n        \"tipo\": \"Ahorros\",\r\n        \"saldo_Inicial\": 1500,\r\n        \"estado\": true,\r\n        \"clienteID\": 3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7056/api/Cuentas/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7056",
+							"path": [
+								"api",
+								"Cuentas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:7056/api/Cuentas/2",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7056",
+							"path": [
+								"api",
+								"Cuentas",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Movimiento",
+			"item": [
+				{
+					"name": "Read All",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:7056/api/Movimientos",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7056",
+							"path": [
+								"api",
+								"Movimientos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Read for ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7056/api/Movimientos/2",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7056",
+							"path": [
+								"api",
+								"Movimientos",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"fecha\": \"2023-05-02T03:02:10.096Z\",\r\n  \"tipo\": \"Corriente\",\r\n  \"valor\": 100,\r\n  \"saldo\": 200,\r\n  \"cuentaID\": 1\r\n}"
+						},
+						"url": {
+							"raw": "https://localhost:7056/api/Movimientos",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7056",
+							"path": [
+								"api",
+								"Movimientos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7056/api/Movimientos/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7056",
+							"path": [
+								"api",
+								"Movimientos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7056/api/Movimientos/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7056",
+							"path": [
+								"api",
+								"Movimientos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
